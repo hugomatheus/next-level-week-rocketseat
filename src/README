@@ -1,0 +1,22 @@
+Criar arquivo package.json
+npm init -y
+
+Instalar o express
+--save foi inserido para adicionar a dependência no package.json (acredito que seja versão do npm|node)
+npm install express --save 
+
+Instalar nodemon 
+Utilizado para não precisar sempre ficar rodando a aplicação depois que faz alguma alteração
+caso não queira utilizar é so alterar no package.json de "start": "nodemon  src/server.js" para "start": "node  src/server.js"
+
+Instalar nunjucks
+npm install nunjuck --save
+
+Instalar sqlite3
+npm install sqlite3 --save
+Depois de criado o arquivo bd e criado o metodo para criar a tabela no banco rodar o arquivo para criar a tabela
+node src/database/db.js
+
+
+npm start
+rodar a aplicação pois foi configurado no package.json o comando real para rodar a aplicação

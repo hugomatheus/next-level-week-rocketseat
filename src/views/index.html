@@ -1,0 +1,31 @@
+{% extends "partials/_layout.html" %}
+
+{% block css %}
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/modal.css">
+{% endblock css %}
+
+{% set pageId = "home-page" %}
+{% set header = true %}
+
+{% block main %}
+    <main>
+        <h1>Seu marketplace de coleta de resíduos.</h1>
+        <p>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente</p>
+        <a href="#">
+            <span></span>
+            <strong>Pesquisar pontos de coleta</strong>
+        </a>
+    </main>
+{% endblock main %}
+
+{% block modal %}
+    {% include "partials/_modal-search.html" ignore missing %}
+{% endblock modal %}
+
+{% block scripts %}
+    <script src="js/index.js"></script>
+{% endblock scripts %}
+
+</body>
+</html>

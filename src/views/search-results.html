@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="css/search-results.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <title>Pesquisa de ponto de coleta</title>
+    </head>
+    <body>
+
+        <div id="page-search-results">
+            <div class="content">
+                <header>
+                    <img src="assets/logo.svg" alt="logomarca">
+                    <a href="/">
+                        <span></span>
+                        Voltar para home
+                    </a>
+                </header>
+                <main>
+
+                    <h4>
+                        <strong>{{total}}
+                            pontos</strong>
+                        encontrados
+                    </h4>
+
+                    {% if total > 0 %}
+                        <div class="cards">
+
+                            {% for place in places %}
+                                <div class="card">
+                                    <img src="{{place.image}}" alt="Colectoria">
+                                    <h2>{{place.name}}</h2>
+                                    <h3>{{place.items}}</h3>
+                                    <p>
+                                        {{place.city}}, {{place.state}}
+                                        <br/>
+                                        {{place.address}}
+                                        {% if place.complement %}
+                                            <br/>
+                                            {{place.complement}}
+                                        {% endif %}
+                                        
+                                        <br/>
+                                        Nº {{place.number}}
+                                    </p>
+                                </div>
+                            {% endfor %}
+                            <div class="card">
+                                <img src="https://images.unsplash.com/photo-1528323273322-d81458248d40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2001&q=80" alt="Colectoria">
+                                <h2>Colectoria</h2>
+                                <h3>Resíduos Eletrônicos, Lâmpadas</h3>
+                                <p>
+                                    Rio do Sul, Santa Catarina
+                                    <br/>
+                                    Guilherme Gemballa, Jardim América
+                                    <br/>
+                                    Nº 250
+                                </p>
+                            </div>
+                            <div class="card">
+                                <img src="https://images.unsplash.com/photo-1567393528677-d6adae7d4a0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="Papersider">
+                                <h2>Papersider</h2>
+                                <h3>Papéis e Papelão</h3>
+                                <p>
+                                    Rio do Sul, Santa Catarina
+                                    <br/>
+                                    Guilherme Gemballa, Jardim América
+                                    <br/>
+                                    Nº 260
+                                </p>
+                            </div>
+                        </div>
+                    {% else %} 
+                        <h1>Nenhum ponto de coleta foi encontrado</h1>   
+                    {% endif %}
+
+                </main>
+            </div>
+        </div>
+
+    </body>
+</html>

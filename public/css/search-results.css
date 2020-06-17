@@ -1,0 +1,107 @@
+#page-search-results .content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1100px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#page-search-results header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 48px;
+}
+
+#page-search-results header a {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: var(--title-color);
+}
+
+#page-search-results header a span {
+    display: flex;
+    width: 20px;
+    height: 25px;
+    margin-right: 10px;
+    background-image: url(../assets/arrow-left.svg);
+}
+
+#page-search-results main {
+    margin: 48px;
+}
+
+#page-search-results main img {
+    height: 180px;
+    width: 100%;
+    /* preencher todo espaço com a imagem */
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+ 
+#page-search-results main h4 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #6C6C80;
+    margin-bottom: 32px;
+} 
+ 
+#page-search-results main .card h2 {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 41px;
+    margin-top: 32px;
+} 
+
+#page-search-results main .card h3 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 34px;
+    color: #34CB79;
+    margin: 18px 0 10px 0;
+    
+}
+
+#page-search-results main .card p {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    color: #6C6C80;
+}
+
+#page-search-results main .cards {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+body {
+    background-color: white;
+}
+
+body::after {
+    content: '';
+    background-color: #F0F0F5;
+    position: absolute;
+    width: 100%;
+    height: 17rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+ 

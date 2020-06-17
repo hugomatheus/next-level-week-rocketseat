@@ -1,0 +1,32 @@
+
+<div id="modal" class="success show">
+    <div class="content">
+
+        <div class="header">
+            <a href="#">fechar</a>
+        </div>
+        <div class="main">
+            
+            {% if status %}
+                <img src="assets/check.svg" alt="">
+                <h1>Cadastrado concluído!</h1>
+            {% else %}
+                <img src="assets/x.svg" alt="">
+                <h1>Erro ao cadastrar!</h1>
+            {% endif %}
+            
+        </div>
+       
+    </div>
+</div>
+
+<script>
+    const statusRedirect = {{status}}
+    redirectStatus(statusRedirect);
+    function redirectStatus(status) {
+        const redirect = status === true ? '/' : '/create-point';
+        setTimeout(() => {
+          window.location = redirect
+        }, 2000)
+    }
+</script>
