@@ -18,5 +18,5 @@ Depois de criado o arquivo bd e criado o metodo para criar a tabela no banco rod
 node src/database/db.js
 
 
-npm start
+npm run start
 rodar a aplicação pois foi configurado no package.json o comando real para rodar a aplicação
